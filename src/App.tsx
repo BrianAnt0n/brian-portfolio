@@ -12,6 +12,7 @@ export default function App() {
   const [repos, setRepos] = useState<any[]>([]);
 
 useEffect(() => {
+
   fetch("https://api.github.com/users/BrianAnt0n/repos")
     .then((res) => res.json())
     .then((data) => {
@@ -28,12 +29,33 @@ useEffect(() => {
         .slice(0, 6);
 
       setRepos(filtered);
+
+      // CURSOR GLOW
+      const glow = document.getElementById("cursor-glow");
+
+  const move = (e: MouseEvent) => {
+    if (glow) {
+      glow.style.left = e.clientX + "px";
+      glow.style.top = e.clientY + "px";
+    }
+  };
+
+  window.addEventListener("mousemove", move);
+
+  return () => window.removeEventListener("mousemove", move);
+
     });
 }, []);
 
 
   return (
     <div className="relative bg-black text-white min-h-screen scroll-smooth overflow-hidden">
+
+<div
+  id="cursor-glow"
+  className="pointer-events-none fixed w-40 h-40 rounded-full bg-purple-500/20 blur-3xl -translate-x-1/2 -translate-y-1/2 z-30"
+  style={{ left: 0, top: 0 }}
+/>
 
       {/* BACKGROUND GLOW */}
 <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -120,15 +142,18 @@ useEffect(() => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <h2 className="text-3xl font-semibold mb-6">About Me</h2>
 
         <p className="text-gray-400 leading-relaxed">
-          I'm a passionate IT student from Quezon City University, specializing in
-          mobile app development and backend systems. I love building impactful tech —
-          from smart systems to practical utilities. I am always eager to learn and
-          continuously improve my skills in this field.
-        </p>
+  I'm an IT graduate who enjoys building systems that actually solve real problems —
+  from mobile apps to IoT-based solutions. I focus on creating practical, working
+  applications rather than just concepts.
+  <br /><br />
+  Whether it's a QR-based attendance system or a smart compost monitoring app,
+  I like turning ideas into something people can actually use.
+</p>
         <a
   href="https://github.com/BrianAnt0n"
   target="_blank"
@@ -147,6 +172,7 @@ useEffect(() => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <h2 className="text-3xl font-semibold mb-8">Skills</h2>
 
@@ -164,7 +190,7 @@ useEffect(() => {
           ].map((skill) => (
             <span
               key={skill}
-              className="px-4 py-2 bg-gray-800 rounded-full text-sm hover:bg-gray-700 transition"
+              className="px-4 py-2 bg-gray-800 hover:bg-gray-700 hover:scale-105 transition duration-300 rounded-full text-sm hover:bg-gray-700 transition"
             >
               {skill}
             </span>
@@ -180,6 +206,7 @@ useEffect(() => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
 <h2 className="text-3xl md:text-4xl font-semibold mb-2">
   Featured Projects
@@ -254,6 +281,7 @@ useEffect(() => {
   initial="hidden"
   whileInView="show"
   viewport={{ once: true }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
 >
   <h2 className="text-2xl font-semibold mb-8 text-gray-300">
     Other Projects
@@ -290,12 +318,14 @@ useEffect(() => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <h2 className="text-3xl font-semibold mb-6">Contact</h2>
 
-        <p className="text-gray-400 mb-4">
-          Open for opportunities, collaborations, or freelance work.
-        </p>
+        <p className="text-gray-400 mb-4 max-w-md mx-auto">
+  I'm currently open to opportunities, collaborations, or freelance work.
+  If you have something interesting in mind, feel free to reach out.
+</p>
 
         <div className="flex justify-center gap-6 text-sm">
           <a
