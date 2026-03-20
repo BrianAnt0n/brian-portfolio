@@ -181,45 +181,70 @@ useEffect(() => {
         whileInView="show"
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-semibold mb-10">Projects</h2>
+<h2 className="text-3xl md:text-4xl font-semibold mb-2">
+  Featured Projects
+</h2>
+<p className="text-gray-500 mb-10">
+  A selection of systems I’ve built and deployed.
+</p>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
 
-          <motion.a
-            href="https://github.com/BrianAnt0n/CapstoneApp"
-            target="_blank"
-            whileHover={{ scale: 1.05 }}
-            className="bg-gray-900/80 backdrop-blur p-6 rounded-2xl block border border-gray-800 transition duration-300 hover:scale-[1.03] hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.25)]"
-          >
-            <h3 className="text-xl font-bold">
-              📱 E-ComposThink App
-            </h3>
-            <p className="text-gray-400 mt-2">
-              Smart compost + sensor monitoring system with real-time data tracking.
-            </p>
-            <p className="text-xs text-gray-500 mt-4">
-              Flutter • Supabase • IoT
-            </p>
-          </motion.a>
+{/* PROJECT 1 */}
+<motion.a
+  href="https://github.com/BrianAnt0n/CapstoneApp"
+  target="_blank"
+  whileHover={{ scale: 1.03 }}
+  className="group bg-gray-900/70 backdrop-blur rounded-2xl overflow-hidden border border-gray-800 transition duration-300 hover:border-purple-400/40 hover:shadow-[0_0_40px_rgba(168,85,247,0.25)]"
+>
+  <img
+    src={`${import.meta.env.BASE_URL}projects/ecompost.jpg`}
+    className="w-full h-48 object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500"
+  />
 
-          <motion.a
-            href="https://brianant0n.github.io/OJT-Attendance-Monitoring-Using-QR-Code-Project/#/test"
-            target="_blank"
-            whileHover={{ scale: 1.05 }}
-            className="bg-gray-900/80 backdrop-blur p-6 rounded-2xl block border border-gray-800 transition duration-300 hover:scale-[1.03] hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.25)]"
-          >
-            <h3 className="text-xl font-bold">
-              ⏱️ OJT Attendance System
-            </h3>
-            <p className="text-gray-400 mt-2">
-              QR-based attendance system with backend integration.
-            </p>
-            <p className="text-xs text-gray-500 mt-4">
-              Flutter • PHP • MySQL
-            </p>
-          </motion.a>
+  <div className="p-6">
+    <h3 className="text-xl font-semibold">
+      📱 E-ComposThink App
+    </h3>
 
-        </div>
+    <p className="text-gray-400 mt-2">
+      Smart compost + sensor monitoring system with real-time data tracking.
+    </p>
+
+    <p className="text-xs text-gray-500 mt-4">
+      Flutter • Supabase • IoT
+    </p>
+  </div>
+</motion.a>
+
+{/* PROJECT 2 */}
+<motion.a
+  href="https://brianant0n.github.io/OJT-Attendance-Monitoring-Using-QR-Code-Project/#/test"
+  target="_blank"
+  whileHover={{ scale: 1.03 }}
+  className="group bg-gray-900/70 backdrop-blur rounded-2xl overflow-hidden border border-gray-800 transition duration-300 hover:border-blue-400/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.25)]"
+>
+  <img
+    src={`${import.meta.env.BASE_URL}projects/ojt.png`}
+    className="w-full h-48 object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition duration-500"
+  />
+
+  <div className="p-6">
+    <h3 className="text-xl font-semibold">
+      ⏱️ OJT Attendance System
+    </h3>
+
+    <p className="text-gray-400 mt-2">
+      QR-based attendance system with backend integration.
+    </p>
+
+    <p className="text-xs text-gray-500 mt-4">
+      Flutter • PHP • MySQL
+    </p>
+  </div>
+</motion.a>
+
+</div>
       </motion.section>
 
       {/* REPOS */}
