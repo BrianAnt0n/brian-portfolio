@@ -48,7 +48,7 @@ useEffect(() => {
       />
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 w-full flex justify-center gap-6 p-4 bg-black/50 backdrop-blur z-40 text-sm">
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full bg-black/60 backdrop-blur border border-gray-800 flex gap-6 z-40 text-sm">
         <a href="#home" className="hover:text-gray-400 transition">Home</a>
         <a href="#about" className="hover:text-gray-400 transition">About</a>
         <a href="#projects" className="hover:text-gray-400 transition">Projects</a>
@@ -189,7 +189,7 @@ useEffect(() => {
             href="https://github.com/BrianAnt0n/CapstoneApp"
             target="_blank"
             whileHover={{ scale: 1.05 }}
-            className="bg-gray-900 p-6 rounded-2xl block border border-gray-800 transition duration-300 hover:scale-105 hover:border-gray-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.15)]"
+            className="bg-gray-900/80 backdrop-blur p-6 rounded-2xl block border border-gray-800 transition duration-300 hover:scale-[1.03] hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.25)]"
           >
             <h3 className="text-xl font-bold">
               📱 E-ComposThink App
@@ -206,7 +206,7 @@ useEffect(() => {
             href="https://brianant0n.github.io/OJT-Attendance-Monitoring-Using-QR-Code-Project/#/test"
             target="_blank"
             whileHover={{ scale: 1.05 }}
-            className="bg-gray-900 p-6 rounded-2xl block border border-gray-800 transition duration-300 hover:scale-105 hover:border-gray-500 hover:shadow-[0_0_25px_rgba(255,255,255,0.15)]"
+            className="bg-gray-900/80 backdrop-blur p-6 rounded-2xl block border border-gray-800 transition duration-300 hover:scale-[1.03] hover:border-purple-400/40 hover:shadow-[0_0_30px_rgba(168,85,247,0.25)]"
           >
             <h3 className="text-xl font-bold">
               ⏱️ OJT Attendance System
