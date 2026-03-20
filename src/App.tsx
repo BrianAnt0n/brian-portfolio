@@ -33,7 +33,13 @@ useEffect(() => {
 
 
   return (
-    <div className="bg-black text-white min-h-screen scroll-smooth">
+    <div className="relative bg-black text-white min-h-screen scroll-smooth overflow-hidden">
+
+      {/* BACKGROUND GLOW */}
+<div className="absolute inset-0 -z-10 overflow-hidden">
+  <div className="absolute w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-3xl top-[-100px] left-[-100px] animate-pulse" />
+  <div className="absolute w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-3xl bottom-[-100px] right-[-100px] animate-pulse" />
+</div>
 
       {/* SCROLL PROGRESS BAR */}
       <motion.div
@@ -51,45 +57,65 @@ useEffect(() => {
 
       {/* HERO */}
       <section id="home" className="h-screen flex flex-col justify-center items-center text-center px-6 pt-16">
-        <motion.h1
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-6xl font-bold"
-        >
-          Brian Aniceto
-          <motion.p className="mt-2 text-sm text-gray-500">
-  Building real-world systems, one project at a time.
-</motion.p>
-        </motion.h1>
 
-        <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          transition={{ delay: 0.2 }}
-          className="mt-4 text-gray-400 text-lg max-w-xl"
-        >
-          IT Graduate • Flutter Developer • IoT Builder
-        </motion.p>
+  <motion.h1
+    variants={fadeUp}
+    initial="hidden"
+    animate="show"
+    transition={{ duration: 0.6 }}
+    className="text-4xl md:text-6xl font-bold leading-tight"
+  >
+    Hi, I’m Brian 👋
+  </motion.h1>
 
-        {/* OPTIONAL PHOTO */}
-        <motion.img
-          variants={fadeUp}
-          initial="hidden"
-          animate="show"
-          transition={{ delay: 0.4 }}
-          src={`${import.meta.env.BASE_URL}profile.png`}
-          alt="Profile"
-          className="w-32 h-32 rounded-full object-cover mt-8 border border-gray-700"
-        />
-      </section>
+  <motion.p
+    variants={fadeUp}
+    initial="hidden"
+    animate="show"
+    transition={{ delay: 0.2 }}
+    className="mt-4 text-gray-300 text-lg md:text-xl max-w-xl"
+  >
+    I build real-world systems using Flutter, IoT, and backend technologies.
+  </motion.p>
+
+  <motion.p
+    variants={fadeUp}
+    initial="hidden"
+    animate="show"
+    transition={{ delay: 0.3 }}
+    className="mt-2 text-sm text-gray-500"
+  >
+    Turning ideas into working systems.
+  </motion.p>
+
+  {/* CTA */}
+  <motion.a
+    href="#projects"
+    variants={fadeUp}
+    initial="hidden"
+    animate="show"
+    transition={{ delay: 0.4 }}
+    className="mt-6 px-6 py-2 border border-gray-700 rounded-full text-sm hover:bg-white hover:text-black transition"
+  >
+    View Projects
+  </motion.a>
+
+  {/* PROFILE */}
+  <motion.img
+    variants={fadeUp}
+    initial="hidden"
+    animate="show"
+    transition={{ delay: 0.5 }}
+    src={`${import.meta.env.BASE_URL}profile.png`}
+    alt="Profile"
+    className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover mt-8 border border-gray-700"
+  />
+</section>
 
       {/* ABOUT */}
       <motion.section
         id="about"
-        className="px-6 md:px-20 py-20 max-w-3xl mx-auto"
+        className="px-6 md:px-20 py-24 md:py-32 max-w-3xl mx-auto"
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
@@ -116,7 +142,7 @@ useEffect(() => {
 
       {/* SKILLS */}
       <motion.section
-        className="px-6 md:px-20 py-20 max-w-4xl mx-auto"
+        className="px-6 md:px-20 py-24 md:py-32 max-w-4xl mx-auto"
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
@@ -149,7 +175,7 @@ useEffect(() => {
       {/* PROJECTS */}
       <motion.section
         id="projects"
-        className="px-6 md:px-20 py-20"
+        className="px-6 md:px-20 py-24 md:py-32"
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
@@ -198,7 +224,7 @@ useEffect(() => {
 
       {/* REPOS */}
       <motion.section
-  className="px-6 md:px-20 py-20"
+  className="px-6 md:px-20 py-24 md:py-32"
   variants={fadeUp}
   initial="hidden"
   whileInView="show"
@@ -234,7 +260,7 @@ useEffect(() => {
       {/* CONTACT */}
       <motion.section
         id="contact"
-        className="px-6 md:px-20 py-20 text-center"
+        className="px-6 md:px-20 py-24 md:py-32 text-center"
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
