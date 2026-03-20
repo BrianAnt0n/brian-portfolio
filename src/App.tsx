@@ -80,7 +80,7 @@ useEffect(() => {
           initial="hidden"
           animate="show"
           transition={{ delay: 0.4 }}
-          src="/profile.png"  // ✅ FIXED PATH (put image in /public)
+          src={`${import.meta.env.BASE_URL}profile.png`}
           alt="Profile"
           className="w-32 h-32 rounded-full object-cover mt-8 border border-gray-700"
         />
