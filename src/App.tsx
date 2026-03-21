@@ -78,66 +78,70 @@ useEffect(() => {
       </nav>
 
       {/* HERO */}
-      <section id="home" className="h-screen flex flex-col justify-center items-center text-center px-6 pt-16">
+      <section id="home" className="min-h-[90vh] flex flex-col justify-center items-center text-center px-6 pt-16">
 
-  <motion.h1
-    variants={fadeUp}
-    initial="hidden"
-    animate="show"
-    transition={{ duration: 0.6 }}
-    className="text-4xl md:text-6xl font-bold leading-tight"
-  >
-    Hi, I’m Brian 👋
-  </motion.h1>
+{/* PROFILE FIRST */}
+<motion.img
+  variants={fadeUp}
+  initial="hidden"
+  animate="show"
+  transition={{ duration: 0.6 }}
+  src={`${import.meta.env.BASE_URL}profile.png`}
+  alt="Profile"
+  className="w-44 h-44 md:w-56 md:h-56 rounded-full object-cover mb-6 border border-gray-700 ring-2 ring-purple-500/30 shadow-[0_0_40px_rgba(168,85,247,0.3)]"
+/>
 
-  <motion.p
-    variants={fadeUp}
-    initial="hidden"
-    animate="show"
-    transition={{ delay: 0.2 }}
-    className="mt-4 text-gray-300 text-lg md:text-xl max-w-xl"
-  >
-    I build real-world systems using Flutter, IoT, and backend technologies.
-  </motion.p>
+<motion.h1
+  variants={fadeUp}
+  initial="hidden"
+  animate="show"
+  transition={{ delay: 0.1 }}
+  className="text-4xl md:text-6xl font-bold leading-tight"
+>
+  Hi, I’m Brian 👋
+</motion.h1>
 
-  <motion.p
-    variants={fadeUp}
-    initial="hidden"
-    animate="show"
-    transition={{ delay: 0.3 }}
-    className="mt-2 text-sm text-gray-500"
-  >
-    Turning ideas into working systems.
-  </motion.p>
+<motion.p
+  variants={fadeUp}
+  initial="hidden"
+  animate="show"
+  transition={{ delay: 0.2 }}
+  className="mt-4 text-gray-300 text-lg md:text-xl max-w-xl"
+>
+  I build real-world systems using Flutter, IoT, and backend technologies.
+</motion.p>
 
-  {/* CTA */}
-  <motion.a
-    href="#projects"
-    variants={fadeUp}
-    initial="hidden"
-    animate="show"
-    transition={{ delay: 0.4 }}
-    className="mt-6 px-6 py-2 border border-gray-700 rounded-full text-sm hover:bg-white hover:text-black transition"
-  >
-    View Projects
-  </motion.a>
+<motion.p
+  variants={fadeUp}
+  initial="hidden"
+  animate="show"
+  transition={{ delay: 0.3 }}
+  className="mt-2 text-sm text-gray-500"
+>
+  Turning ideas into working systems.
+</motion.p>
 
-  {/* PROFILE */}
-  <motion.img
-    variants={fadeUp}
-    initial="hidden"
-    animate="show"
-    transition={{ delay: 0.5 }}
-    src={`${import.meta.env.BASE_URL}profile.png`}
-    alt="Profile"
-    className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover mt-8 border border-gray-700"
-  />
+<motion.a
+  href="#projects"
+  variants={fadeUp}
+  initial="hidden"
+  animate="show"
+  transition={{ delay: 0.4 }}
+  className="mt-6 px-6 py-2 border border-gray-700 rounded-full text-sm hover:bg-white hover:text-black transition"
+>
+  View Projects
+</motion.a>
+
+
+  
 </section>
 
+
+<div className="h-10 bg-gradient-to-b from-transparent to-black" />
       {/* ABOUT */}
       <motion.section
         id="about"
-        className="px-6 md:px-20 py-24 md:py-32 max-w-3xl mx-auto"
+        className="px-6 md:px-20 py-20 md:py-24 max-w-3xl mx-auto"
         variants={fadeUp}
         initial="hidden"
         whileInView="show"
