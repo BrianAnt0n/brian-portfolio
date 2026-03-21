@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Brian Anton Portfolio
+# 🚀 Brian Aniceto's Portfolio
 
 A modern, minimalist personal portfolio built to showcase my projects, skills, and development journey.
 
@@ -35,16 +35,18 @@ A modern, minimalist personal portfolio built to showcase my projects, skills, a
 ---
 
 ## 📂 Project Structure
+```text
 brian-portfolio/
 ├── public/
 ├── src/
-│ ├── components/
-│ ├── sections/
-│ ├── assets/
-│ └── App.jsx
+│   ├── components/
+│   ├── sections/
+│   ├── assets/
+│   └── App.jsx
 ├── index.html
 ├── package.json
 └── README.md
+```
 
 ---
 
@@ -55,10 +57,22 @@ brian-portfolio/
 ```bash
 git clone https://github.com/BrianAnt0n/brian-portfolio.git 
 ```
-2. Install dependencies
+2. Navigate to the project folder  
+
+```bash
 cd brian-portfolio
-3. Run development server
+```
+3. Install dependencies
+
+```bash
+npm install
+```
+   
+4. Run development server
+
+```bash
 npm run dev
+```
 
 ## 🧩 Sections Included
 
@@ -99,12 +113,13 @@ You can deploy this portfolio easily using:
 - Netlify  
 - GitHub Pages  
 
-### Quick Deploy (Vercel)
+---
 
-```bash
-npm install -g vercel
-vercel
-```
+## ⚡ Performance
+
+Optimized for fast load times and smooth animations using modern frontend best practices.
+
+---
 ## 🤝 Contributing
 
 This is a personal project, but suggestions and ideas are welcome!
@@ -136,8 +151,8 @@ This project is open-source and available under the MIT License.
 
 ## 💡 Acknowledgements
 
-- Inspiration from modern developer portfolios  
-- Built with React, Tailwind, and Framer Motion  
+- Inspired by modern developer portfolio designs  
+- Built with modern web technologies focused on performance, scalability, and clean UI/UX  
 
 ---
 
