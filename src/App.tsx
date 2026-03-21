@@ -1,5 +1,16 @@
 import { motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
+import {
+  SiFlutter,
+  SiDart,
+  SiPhp,
+  SiMysql,
+  SiSupabase,
+  SiFirebase,
+  SiArduino,
+} from "react-icons/si";
+
+import { FaGitAlt } from "react-icons/fa";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -169,38 +180,104 @@ useEffect(() => {
 
       
 
-      {/* SKILLS */}
-      <motion.section
-        className="px-6 md:px-20 py-24 md:py-32 max-w-4xl mx-auto"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
-        <h2 className="text-3xl font-semibold mb-8">Skills</h2>
+   {/* SKILLS */}
+<motion.section
+  className="px-6 md:px-20 py-16 md:py-20 max-w-4xl mx-auto"
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+>
+  <div className="bg-gray-900/60 backdrop-blur rounded-2xl p-8 border border-gray-800">
 
-        <div className="flex flex-wrap gap-3">
-          {[
-            "Flutter",
-            "Dart",
-            "Supabase",
-            "PHP",
-            "MySQL",
-            "Arduino",
-            "REST APIs",
-            "Git",
-            "Firebase",
-          ].map((skill) => (
-            <span
-              key={skill}
-              className="px-4 py-2 bg-gray-800 hover:bg-gray-700 hover:scale-105 transition duration-300 rounded-full text-sm hover:bg-gray-700 transition"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </motion.section>
+    <h2 className="text-3xl font-semibold mb-2">Skills</h2>
+    <p className="text-gray-500 mb-8 text-sm">
+      Technologies I use to build real-world systems.
+    </p>
+
+    <div className="grid md:grid-cols-2 gap-6">
+
+      {/* MOBILE */}
+<div>
+  <h3 className="text-sm text-purple-400 mb-3">📱 Mobile</h3>
+  <div className="flex flex-wrap gap-3">
+
+    <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-full text-xs border border-gray-700 hover:border-purple-400/40 hover:bg-gray-700 transition">
+      <SiFlutter className="text-purple-400" />
+      Flutter
+    </div>
+
+    <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-full text-xs border border-gray-700 hover:border-purple-400/40 hover:bg-gray-700 transition">
+      <SiDart className="text-blue-400" />
+      Dart
+    </div>
+
+  </div>
+</div>
+
+     {/* BACKEND */}
+<div>
+  <h3 className="text-sm text-blue-400 mb-3">🧠 Backend</h3>
+  <div className="flex flex-wrap gap-3">
+
+    <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-full text-xs border border-gray-700 hover:border-blue-400/40 hover:bg-gray-700 transition">
+      <SiPhp className="text-indigo-400" />
+      PHP
+    </div>
+
+    <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-full text-xs border border-gray-700 hover:border-blue-400/40 hover:bg-gray-700 transition">
+      <SiMysql className="text-blue-500" />
+      MySQL
+    </div>
+
+    <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-full text-xs border border-gray-700 hover:border-blue-400/40 hover:bg-gray-700 transition">
+      <SiSupabase className="text-green-400" />
+      Supabase
+    </div>
+
+    <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-full text-xs border border-gray-700 hover:border-blue-400/40 hover:bg-gray-700 transition">
+      🌐 REST APIs
+    </div>
+
+  </div>
+</div>
+
+     {/* HARDWARE */}
+<div>
+  <h3 className="text-sm text-green-400 mb-3">🔌 Hardware</h3>
+  <div className="flex flex-wrap gap-3">
+
+    <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-full text-xs border border-gray-700 hover:border-green-400/40 hover:bg-gray-700 transition">
+      <SiArduino className="text-green-500" />
+      Arduino
+    </div>
+
+  </div>
+</div>
+
+    {/* TOOLS */}
+<div>
+  <h3 className="text-sm text-yellow-400 mb-3">🛠 Tools</h3>
+  <div className="flex flex-wrap gap-3">
+
+    <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-full text-xs border border-gray-700 hover:border-yellow-400/40 hover:bg-gray-700 transition">
+      <FaGitAlt className="text-orange-400" />
+      Git
+    </div>
+
+    <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-800 rounded-full text-xs border border-gray-700 hover:border-yellow-400/40 hover:bg-gray-700 transition">
+      <SiFirebase className="text-yellow-400" />
+      Firebase
+    </div>
+
+  </div>
+</div>
+
+    </div>
+
+  </div>
+</motion.section>
 
       {/* PROJECTS */}
       <motion.section

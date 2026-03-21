@@ -5,13 +5,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+   "deploy": "gh-pages -d dist -r git@github.com:BrianAnt0n/brian-portfolio.git"
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",
@@ -19,6 +18,7 @@
     "framer-motion": "^12.38.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-icons": "^5.6.0",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
